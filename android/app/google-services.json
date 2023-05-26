@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "60799712447",
+    "project_id": "nrich-db143",
+    "storage_bucket": "nrich-db143.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60799712447:android:2c4c1a29de5100532d9a0a",
+        "android_client_info": {
+          "package_name": "com.example.nrich"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60799712447-roa5u52n19ein2tln3ianf37hcf6tu6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nrich",
+            "certificate_hash": "f4c4cb39a7854bcdab725076dc873907c86da429"
+          }
+        },
+        {
+          "client_id": "60799712447-cpdod9288vhrd9hv4rrbtea5e4n16ovp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwHz1XeEYSHOvGcGYenRDELBAOhiyxKC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60799712447-cpdod9288vhrd9hv4rrbtea5e4n16ovp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
