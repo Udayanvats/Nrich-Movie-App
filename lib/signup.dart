@@ -3,6 +3,7 @@ import 'package:nrich/constants.dart';
 import 'package:nrich/login.dart';
 import 'package:nrich/widget/gradient_button.dart';
 import 'package:nrich/widget/login_field.dart';
+import 'package:nrich/widget/password_field.dart';
 import 'package:nrich/widget/social.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -51,6 +52,7 @@ class RegisterScreen extends StatelessWidget {
               height: 30,
             ),
             LoginField(
+              obscuretext: false,
               hintText: 'Username',
               textEditingController: _username,
             ),
@@ -58,13 +60,15 @@ class RegisterScreen extends StatelessWidget {
               height: 15,
             ),
             LoginField(
+              obscuretext: false,
               hintText: 'Email',
               textEditingController: _email,
             ),
             const SizedBox(
               height: 15,
             ),
-            LoginField(
+            PasswordField(
+              obscuretext: true,
               hintText: 'Password',
               textEditingController: _password,
             ),

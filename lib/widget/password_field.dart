@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nrich/constants.dart';
 
-class LoginField extends StatefulWidget {
+class PasswordField extends StatefulWidget {
   final TextEditingController textEditingController;
 
   final String hintText;
-  final bool obscuretext;
+  bool obscuretext;
 
-  const LoginField({
+  PasswordField({
     super.key,
     required this.hintText,
     required this.textEditingController,
@@ -15,10 +15,10 @@ class LoginField extends StatefulWidget {
   });
 
   @override
-  State<LoginField> createState() => _LoginFieldState();
+  State<PasswordField> createState() => _LoginFieldState();
 }
 
-class _LoginFieldState extends State<LoginField> {
+class _LoginFieldState extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
@@ -27,6 +27,15 @@ class _LoginFieldState extends State<LoginField> {
         obscureText: widget.obscuretext,
         controller: widget.textEditingController,
         decoration: InputDecoration(
+          suffixIcon: IconButton(
+            icon: Icon(
+                widget.obscuretext ? Icons.visibility : Icons.visibility_off),
+            onPressed: () {
+              setState(() {
+                widget.obscuretext = !widget.obscuretext;
+              });
+            },
+          ),
           hintText: widget.hintText,
           contentPadding: EdgeInsets.all(20),
           enabledBorder: OutlineInputBorder(

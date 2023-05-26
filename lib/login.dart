@@ -7,6 +7,7 @@ import 'package:nrich/signup.dart';
 import 'package:nrich/widget/gradient_button.dart';
 import 'package:nrich/widget/login_controller.dart';
 import 'package:nrich/widget/login_field.dart';
+import 'package:nrich/widget/password_field.dart';
 import 'package:nrich/widget/social.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -36,11 +37,13 @@ class LoginScreen extends StatelessWidget {
               LoginField(
                 hintText: 'Email',
                 textEditingController: _email,
+                obscuretext: false,
               ),
               const SizedBox(
                 height: 15,
               ),
-              LoginField(
+              PasswordField(
+                obscuretext: true,
                 hintText: 'Password',
                 textEditingController: _password,
               ),
@@ -131,7 +134,7 @@ class LoginScreen extends StatelessWidget {
                   return ProfilePage();
                 }
               }),
-              const SizedBox(height: 70),
+              const SizedBox(height: 60),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
