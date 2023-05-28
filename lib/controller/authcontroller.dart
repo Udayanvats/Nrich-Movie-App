@@ -7,8 +7,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import 'package:image_picker/image_picker.dart';
 import 'package:nrich/constants.dart';
-import 'package:nrich/homepage.dart';
-import 'package:nrich/login.dart';
+import 'package:nrich/screen/homepage.dart';
+import 'package:nrich/screen/login.dart';
 import 'package:nrich/usermodel.dart';
 
 class AuthController extends GetxController {
@@ -109,5 +109,15 @@ class AuthController extends GetxController {
     }
   }
 
-  
+  signInWithGoogle() async {
+    final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
+    final GoogleSignInAuthentication gAuth = await gUser!.authentication;
+    final credential = GoogleAuthProvider.credential(
+      accessToken: gAuth.accessToken,
+      idToken: gAuth.idToken,
+    );
+   
+
+    return await firebaseAuth.signInWithCredential(credential);
+  }
 }

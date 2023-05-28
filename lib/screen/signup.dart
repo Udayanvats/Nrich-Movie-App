@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nrich/constants.dart';
-import 'package:nrich/login.dart';
-import 'package:nrich/widget/gradient_button.dart';
-import 'package:nrich/widget/login_field.dart';
-import 'package:nrich/widget/password_field.dart';
-import 'package:nrich/widget/social.dart';
+import 'package:nrich/screen/login.dart';
+import 'package:nrich/controller/widget/gradient_button.dart';
+import 'package:nrich/controller/widget/login_field.dart';
+import 'package:nrich/controller/widget/password_field.dart';
+import 'package:nrich/controller/widget/social.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
